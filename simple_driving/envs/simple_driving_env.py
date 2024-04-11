@@ -112,6 +112,9 @@ class SimpleDrivingEnv(gym.Env):
         self.car = Car(self._p)
         self._envStepCounter = 0
 
+        self.obstacle = self._p.loadURDF(fileName=<path to urdf file here>,
+                   basePosition=[0, 0, 0])
+        
         # Set the goal to a random target
         x = (self.np_random.uniform(5, 9) if self.np_random.integers(2) else
              self.np_random.uniform(-9, -5))
@@ -123,6 +126,8 @@ class SimpleDrivingEnv(gym.Env):
 
         # Visual element of the goal
         self.goal_object = Goal(self._p, self.goal)
+
+        #self.obstacle = self._p.loadURDF(fileName=<path to urdf file here>, basePosition=[0, 0, 0])
 
         # Get observation to return
         carpos = self.car.get_observation()
