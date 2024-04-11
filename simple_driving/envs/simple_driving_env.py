@@ -94,7 +94,7 @@ class SimpleDrivingEnv(gym.Env):
         #print("info dict:", dict())
 
         ### TASK 3 Edit Reward +50 if Reached Goal ####
-        if self.done:
+        if self.reached_goal:
             reward = reward + 50
         return ob, reward, self.done, dict()
 
