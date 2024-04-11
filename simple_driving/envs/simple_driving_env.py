@@ -197,7 +197,7 @@ class SimpleDrivingEnv(gym.Env):
         return observation
 
     def _termination(self):
-        return self._envStepCounter > 2000
+        return self._envStepCounter > 3000
 
     def close(self):
         self._p.disconnect()
