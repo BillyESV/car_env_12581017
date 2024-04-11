@@ -96,6 +96,7 @@ class SimpleDrivingEnv(gym.Env):
         ### TASK 3 Edit Reward +50 if Reached Goal ####
         if self.reached_goal:
             reward = reward + 50
+        ### END TASK 3 ###    
         return ob, reward, self.done, dict()
 
     def seed(self, seed=None):
