@@ -1,8 +1,8 @@
 <?xml version="1.0"?> 
-<robot name="simplegoal">
+<robot name="obst">
     <!-- Colors --> 
-    <material name="green">
-        <color rgba="0 0.925 0 1"/>
+    <material name="red">
+        <color rgba="0.925 0 0 1"/>
     </material>
 
     <!-- Goal -->
