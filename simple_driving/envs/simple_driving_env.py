@@ -86,6 +86,12 @@ class SimpleDrivingEnv(gym.Env):
             self.reached_goal = True
 
         ob = car_ob
+
+        print("Debug in step():")
+        print("ob:", ob)
+        print("reward:", reward)
+        print("self.done:", self.done)
+        print("info dict:", dict())
         return ob, reward, self.done, dict()
 
     def seed(self, seed=None):
